@@ -18,17 +18,19 @@ const Typographies: React.FC<TypographiesProps> = (props) => {
             <Grid container spacing={6}>
                 {typographies.map((typography, index) => (
                     <Grid item xs={12} sm={6} md={6} key={index}>
-                        <Box className={classes.typography}>
-                            <Typography style={{
-                                fontSize: typography.fontSize + 'px',
-                                fontWeight: typography.fontWeight,
-                            }}>
-                                {typography.name}
-                            </Typography>
-                            <Typography variant='caption' color='GrayText'>{typography.fontSize + 'px'}</Typography>
-                        </Box>
+                        <Typography style={{
+                            fontSize: typography.fontSize + 'px',
+                            fontWeight: typography.fontWeight,
+                        }}>
+                            {typography.name}
+                        </Typography>
+                        <Typography variant='caption' color='GrayText'>{typography.fontSize + 'px'}</Typography>
                     </Grid>
                 ))}
+                <Grid item xs={12} sm={6} md={6} >
+                    <Typography variant='body2' color='primary'>BUTTON TEXT</Typography>
+                    <Typography variant='caption' color='GrayText'>{14 + 'px'}</Typography>
+                </Grid>
             </Grid>
         </Panel>
     );

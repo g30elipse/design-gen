@@ -37,11 +37,13 @@ export type FontFamily = {
 
 
 export const defaultTheme: ThemeData = {
-    primaryColor: '#00ff00',
+    primaryColor: '#00872a',
     secondaryColor: '#0a00d0',
     backgroundColor: '#ffffff',
 
     fontFamilyPrimary: {
+        // name: 'Dancing Script',
+        // url: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap',
         name: 'Poppins',
         url: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
         fontWeightBold: 700,
