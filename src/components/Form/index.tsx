@@ -58,7 +58,32 @@ export const defaultTheme: ThemeData = {
             fontWeight: 700,
             fontSize: 64,
             name: 'Heading 1'
-        }
+        },
+        {
+            fontWeight: 700,
+            fontSize: 32,
+            name: 'Heading 2'
+        },
+        {
+            fontWeight: 700,
+            fontSize: 24,
+            name: 'Heading 3'
+        },
+        {
+            fontWeight: 400,
+            fontSize: 16,
+            name: 'Body 1'
+        },
+        {
+            fontWeight: 400,
+            fontSize: 14,
+            name: 'Body 2'
+        },
+        {
+            fontWeight: 400,
+            fontSize: 12,
+            name: 'Caption'
+        },
     ],
 }
 
