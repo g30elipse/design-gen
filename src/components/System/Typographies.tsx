@@ -13,7 +13,7 @@ const Typographies: React.FC<TypographiesProps> = (props) => {
     const classes = useStyles({});
 
     return (
-        <Panel title='TYPOGRAPHY'>
+        <Panel title='TYPOGRAPHY' id='typographies'>
             <Typography variant='h5' marginBottom={5}><span className={classes.tag}>{themeData.fontFamilyPrimary.name}</span></Typography>
             <Grid container spacing={6}>
                 {typographies.map((typography, index) => (
