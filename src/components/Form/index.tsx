@@ -16,13 +16,13 @@ export interface ThemeData {
 
     fontFamilyPrimary: FontFamily;
     // fontFamilySecondary: string;
-    typographies: Typography[];
+    typographies: TTypography[];
 
 }
 
-export type Typography = {
+export type TTypography = {
     name: string;
-    fontFamily: string;
+    // fontFamily: string;
     fontWeight: number;
     fontSize: number;
 }
@@ -30,17 +30,23 @@ export type Typography = {
 export type FontFamily = {
     name: string;
     url: string;
+    fontWeightBold: number;
+    fontWeightRegular: number;
+    fontWeightMedium: number;
 }
 
 
-const defaultTheme: ThemeData = {
+export const defaultTheme: ThemeData = {
     primaryColor: '#00ff00',
     secondaryColor: '#0a00d0',
     backgroundColor: '#ffffff',
 
     fontFamilyPrimary: {
-        name: 'Roboto',
-        url: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'
+        name: 'Poppins',
+        url: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
+        fontWeightBold: 700,
+        fontWeightRegular: 400,
+        fontWeightMedium: 500,
     },
 
     textColorPrimary: '#111111',
@@ -48,10 +54,10 @@ const defaultTheme: ThemeData = {
 
     typographies: [
         {
-            fontFamily: 'Roboto',
+            // fontFamily: 'Roboto',
             fontWeight: 700,
             fontSize: 64,
-            name: 'Title'
+            name: 'Heading 1'
         }
     ],
 }

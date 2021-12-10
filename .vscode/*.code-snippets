@@ -3,19 +3,24 @@
         "prefix": "xfc",
         "body": [
             "import React from 'react';",
-            "import './index.scss';",
+            "import { Box, Theme } from '@mui/material';",
+            "import { makeStyles } from '@mui/styles';",
             "",
             "export interface ${1:$TM_FILENAME_BASE}Props {",
             "",
             "}",
             "const ${1:$TM_FILENAME_BASE}: React.FC<${1:$TM_FILENAME_BASE}Props> = (props) => {",
+            "\tconst classes = useStyles({});",
             "",
             "\treturn (",
-            "\t\t<div className=\"${1:$TM_FILENAME_BASE}\">",
-            "\t\t</div>",
+            "\t\t<Box>",
+            "\t\t</Box>",
             "\t);",
             "};",
             "",
+            "const useStyles = makeStyles<Theme, any>(theme => ({",
+            "",
+            "}));",
             "export default ${1:$TM_FILENAME_BASE};"
         ]
     }
