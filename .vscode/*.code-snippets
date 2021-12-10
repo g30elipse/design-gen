@@ -1,0 +1,22 @@
+{
+    "A React Functional Component": {
+        "prefix": "xfc",
+        "body": [
+            "import React from 'react';",
+            "import './index.scss';",
+            "",
+            "export interface ${1:$TM_FILENAME_BASE}Props {",
+            "",
+            "}",
+            "const ${1:$TM_FILENAME_BASE}: React.FC<${1:$TM_FILENAME_BASE}Props> = (props) => {",
+            "",
+            "\treturn (",
+            "\t\t<div className=\"${1:$TM_FILENAME_BASE}\">",
+            "\t\t</div>",
+            "\t);",
+            "};",
+            "",
+            "export default ${1:$TM_FILENAME_BASE};"
+        ]
+    }
+}
