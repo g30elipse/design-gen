@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Divider, Paper, Theme, ThemeProvider, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import * as htmlToImage from 'html-to-image';
 import html2canvas from 'html2canvas';
 import theme from '../../theme';
 
@@ -19,14 +20,22 @@ const Panel: React.FC<PanelProps> = (props) => {
         if (elDownloadBtn)
             elDownloadBtn.style.display = 'none';
 
-        html2canvas(el, { width: 1200 }).then(canvas => {
-            const a = document.createElement('a');
-            a.href = canvas.toDataURL('image/png');
+        // html2canvas(el, { width: 1200 }).then(canvas => {
+        //     const a = document.createElement('a');
+        //     a.href = canvas.toDataURL('image/png');
+        //     a.download = title + '.png';
+        //     a.click();
+        //     if (elDownloadBtn)
+        //         elDownloadBtn.style.display = 'block';
+        // });
+        htmlToImage.toPng(el).then(function (dataUrl) {
+            let a = document.createElement('a');
+            a.href = dataUrl;
             a.download = title + '.png';
             a.click();
             if (elDownloadBtn)
                 elDownloadBtn.style.display = 'block';
-        });
+        })
     }
 
 
@@ -34,7 +43,7 @@ const Panel: React.FC<PanelProps> = (props) => {
         <ThemeProvider theme={theme}>
             <div id={id}>
                 <Paper square className={classes.root}>
-                    <Box my={1} display='flex' justifyContent='space-between'>
+                    <Box py={1} display='flex' justifyContent='space-between'>
                         <Typography variant='h3' color='gray'>{title}</Typography>
                         <Button id={`${id}-btn`} onClick={saveAsImage} disableRipple>Save PNG</Button>
                     </Box>
