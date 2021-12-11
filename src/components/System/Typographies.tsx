@@ -31,6 +31,17 @@ const Typographies: React.FC<TypographiesProps> = (props) => {
                     <Typography variant='body2' color='primary'>BUTTON TEXT</Typography>
                     <Typography variant='caption' color='GrayText'>{14 + 'px'}</Typography>
                 </Grid>
+                <Grid item xs={12} sm={12} md={12} >
+                    <Typography variant='caption' color='GrayText'>{16 + 'px'} Paragraph</Typography>
+                    <Typography variant='body1'>
+                        Est incididunt reprehenderit incididunt aliquip eiusmod sunt. Minim mollit ea deserunt laboris sunt nisi tempor quis magna excepteur exercitation. Quis mollit laboris ut sint sint id exercitation qui occaecat id veniam. Non est eu duis quis qui dolor officia cillum dolor in.
+                    </Typography>
+                    <br />
+                    <Typography variant='body1'>
+                        Id consectetur ad aliqua voluptate ex sit. Incididunt irure dolore et voluptate consequat duis. Excepteur voluptate ad ea sint Lorem id. Nulla pariatur amet exercitation veniam et et do voluptate consectetur. Non do reprehenderit nisi tempor anim id dolore sunt esse ad dolore. Non in est incididunt minim Lorem ullamco adipisicing nisi eiusmod.
+                    </Typography>
+                </Grid>
+
             </Grid>
         </Panel>
     );

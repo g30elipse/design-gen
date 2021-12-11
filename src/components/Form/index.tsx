@@ -9,6 +9,9 @@ export interface FormProps {
 export interface ThemeData {
     primaryColor: string;
     secondaryColor: string;
+    otherColors: string[];
+    gray: string[];
+
     backgroundColor: string;
 
     textColorPrimary: string;
@@ -39,7 +42,7 @@ export type FontFamily = {
 export const defaultTheme: ThemeData = {
     primaryColor: '#00872a',
     secondaryColor: '#0a00d0',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f1f6ff',
 
     fontFamilyPrimary: {
         // name: 'Dancing Script',
@@ -50,6 +53,23 @@ export const defaultTheme: ThemeData = {
         fontWeightRegular: 400,
         fontWeightMedium: 500,
     },
+
+    otherColors: [
+        '#a0000d',
+        '#aaffdd',
+        '#f09f2a',
+    ],
+
+    gray: [
+        '#000',
+        '#222',
+        '#444',
+        '#666',
+        '#888',
+        '#aaa',
+        '#ccc',
+        '#eee',
+    ],
 
     textColorPrimary: '#111111',
     // textColorSecondary: '#333333',

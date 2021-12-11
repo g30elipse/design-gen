@@ -5,6 +5,7 @@ import ThemeWrapper from './ThemeWrapper';
 import { ThemeData } from '../Form';
 import Typographies from './Typographies';
 import { setFontFamilyImport } from './utils';
+import BrandColors from './BrandColors';
 
 export interface SystemProps {
     themeData: ThemeData
@@ -21,6 +22,9 @@ const System: React.FC<SystemProps> = (props) => {
             <Box bgcolor="#e0e6fc" minHeight="100vh">
                 <Box py={4}>
                     <Typographies themeData={themeData} />
+                </Box>
+                <Box py={4}>
+                    <BrandColors themeData={themeData} />
                 </Box>
             </Box>
         </ThemeWrapper>
