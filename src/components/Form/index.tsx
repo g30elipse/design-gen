@@ -1,4 +1,5 @@
-import { Button } from '@mui/material';
+import { Button, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 
 export interface FormProps {
@@ -47,8 +48,10 @@ export const defaultTheme: ThemeData = {
     fontFamilyPrimary: {
         // name: 'Dancing Script',
         // url: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap',
-        name: 'Poppins',
-        url: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
+        name: 'Allerta Stencil',
+        url: 'https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Dancing+Script:wght@400;500;700&display=swap',
+        // name: 'Poppins',
+        // url: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
         fontWeightBold: 700,
         fontWeightRegular: 400,
         fontWeightMedium: 500,
@@ -111,6 +114,7 @@ export const defaultTheme: ThemeData = {
 
 const Form: React.FC<FormProps> = (props) => {
     const { initialValues, onSave } = props;
+    const classes = useStyles({});
 
     const [formData, setFormData] = React.useState<ThemeData>({
         ...defaultTheme,
@@ -124,10 +128,16 @@ const Form: React.FC<FormProps> = (props) => {
 
 
     return (
-        <form onSubmit={handleSubmit} className="Form">
+        <form onSubmit={handleSubmit} className={classes.root}>
             <Button type='submit'>SAVE</Button>
         </form>
     );
 };
+
+const useStyles = makeStyles<Theme, any>(theme => ({
+    root: {
+        width: 600
+    }
+}));
 
 export default Form;
